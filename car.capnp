@@ -110,6 +110,14 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     lkasDisabled @107;
     canBusMissing @111;
     controlsdLagging @112;
+
+    manualSteeringRequired @120;
+    manualLongitudinalRequired @121;
+    silentPedalPressed @122;
+    silentButtonEnable @123;
+    silentBrakeHold @124;
+    silentWrongGear @125;
+
     resumeBlocked @113;
     steerTimeLimit @115;
     vehicleSensorsInvalid @116;
@@ -211,6 +219,14 @@ struct CarState {
 
   # clutch (manual transmission only)
   clutchPressed @28 :Bool;
+
+  lkasEnabled @48 :Bool;
+  leftBlinkerOn @49 :Bool;
+  rightBlinkerOn @50 :Bool;
+  automaticLaneChange @51 :Bool;
+  belowLaneChangeSpeed @52 :Bool;
+  accEnabled @53 :Bool;
+  hudLead @54 :Float32;
 
   # blindspot sensors
   leftBlindspot @33 :Bool; # Is there something blocking the left lane change
